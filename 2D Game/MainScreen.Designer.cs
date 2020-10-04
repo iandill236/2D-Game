@@ -35,11 +35,11 @@
             // 
             // titleLabel
             // 
-            this.titleLabel.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.Red;
-            this.titleLabel.Location = new System.Drawing.Point(202, 35);
+            this.titleLabel.Location = new System.Drawing.Point(265, 37);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(577, 64);
+            this.titleLabel.Size = new System.Drawing.Size(445, 64);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "FILLER TITLE";
             // 
@@ -49,7 +49,7 @@
             this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.playButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.Color.Lime;
             this.playButton.Location = new System.Drawing.Point(387, 299);
             this.playButton.Name = "playButton";
@@ -65,7 +65,7 @@
             this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
             this.exitButton.Location = new System.Drawing.Point(387, 390);
             this.exitButton.Name = "exitButton";

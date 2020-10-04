@@ -63,9 +63,39 @@ namespace _2D_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrowImage {
+            get {
+                object obj = ResourceManager.GetObject("arrowImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heroFace {
+            get {
+                object obj = ResourceManager.GetObject("heroFace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap swordImage {
             get {
                 object obj = ResourceManager.GetObject("swordImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap villianFace {
+            get {
+                object obj = ResourceManager.GetObject("villianFace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

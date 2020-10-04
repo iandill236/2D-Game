@@ -64,6 +64,7 @@
     <Compile Include="MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Obstacles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -109,6 +110,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\villianFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\villianFace%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heroFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowImage%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowImage%282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
