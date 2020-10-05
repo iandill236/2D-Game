@@ -35,6 +35,7 @@ namespace _2D_Game
             // Add the User Control to the Form 
 
             f.Controls.Add(ss);
+            ss.Focus();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)

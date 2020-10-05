@@ -15,7 +15,7 @@ namespace _2D_Game
         public void Move(int speed)
         {
             y += speed;
-            x += speed / 4;
+            x += speed / 6;
         }
 
         public Obstacles(int _x, int _y, int _size, Color _color)
