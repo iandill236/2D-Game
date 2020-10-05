@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+using System.Security.Cryptography;
 
 namespace _2D_Game
 {
@@ -22,8 +23,8 @@ namespace _2D_Game
         //check if a new game is started
 
         // draws boxes
-        SolidBrush heroBrush = new SolidBrush(Color.Transparent);
-        SolidBrush obstacleBrush = new SolidBrush(Color.Transparent);
+        SolidBrush heroBrush = new SolidBrush(Color.Green);
+        SolidBrush obstacleBrush = new SolidBrush(Color.Red);
 
         List<Obstacles> left = new List<Obstacles>();
         List<Obstacles> right = new List<Obstacles>();
@@ -90,13 +91,15 @@ namespace _2D_Game
         {
             MakeObstacle();
 
-            Color c = Color.Transparent;
+            Color c = Color.Red;
             hero = new Obstacles(this.Width / 2 - heroSize / 2, 445, heroSize, c);
         }
 
         public void MakeObstacle()
         {
-            Color c = Color.Transparent;
+           
+            Color c = Color.Red;
+
 
             patternLength--;
 
@@ -117,9 +120,9 @@ namespace _2D_Game
             }
 
           Obstacles newobstacle = new Obstacles(leftI, 0, 20, c);
-            Obstacles newobstacle2 = new Obstacles(leftI + gap, 0, 20, c);
-            left.Add(newobstacle);
-            right.Add(newobstacle2);
+          Obstacles newobstacle2 = new Obstacles(leftI + gap, 0, 20, c);
+          left.Add(newobstacle);
+          right.Add(newobstacle2);
         }
 
         private void gameLoop_Tick(object sender, EventArgs e)
@@ -185,7 +188,7 @@ namespace _2D_Game
 
                     if (obstacleRec.IntersectsWith(heroRec) || rightobstacleRec.IntersectsWith(heroRec))
                     {
-                       gameLoop.Enabled = false;
+                       //gameLoop.Enabled = false;
                     }
                 }
             }
@@ -200,7 +203,21 @@ namespace _2D_Game
 
         private void GameScreen_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.arrowImage, 0, 50);
+            //draw boxes to screen
+            foreach (Obstacles b in left)
+            {
+                obstacleBrush.Color = b.color;
+                e.Graphics.FillRectangle(obstacleBrush, b.x, b.y, b.size, b.size);
+            }
+
+            foreach (Obstacles b in right)
+            {
+                obstacleBrush.Color = b.color;
+                e.Graphics.FillRectangle(obstacleBrush, b.x, b.y, b.size, b.size);
+            }
+
+            //draw hero character
+            e.Graphics.FillRectangle(heroBrush, hero.x, hero.y, hero.size, hero.size);
         }
     }
 }
