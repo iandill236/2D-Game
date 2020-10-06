@@ -36,11 +36,13 @@ namespace _2D_Game
 
             f.Controls.Add(ss);
             ss.Focus();
+
+
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            
+            losscounternumberLabel.Text = $"{GameScreen.lossCount}";
         }
 
         private void MainScreen_Paint(object sender, PaintEventArgs e)

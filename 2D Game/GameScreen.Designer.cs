@@ -72,9 +72,9 @@
             this.waitLabel.ForeColor = System.Drawing.Color.Red;
             this.waitLabel.Location = new System.Drawing.Point(17, 154);
             this.waitLabel.Name = "waitLabel";
-            this.waitLabel.Size = new System.Drawing.Size(192, 18);
+            this.waitLabel.Size = new System.Drawing.Size(156, 18);
             this.waitLabel.TabIndex = 2;
-            this.waitLabel.Text = "Press W,A,S,D To Move\r\n";
+            this.waitLabel.Text = "Wait a few seconds";
             // 
             // GameScreen
             // 

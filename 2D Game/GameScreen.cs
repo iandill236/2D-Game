@@ -32,12 +32,14 @@ namespace _2D_Game
         List<Obstacles> left = new List<Obstacles>();
         List<Obstacles> right = new List<Obstacles>();
         List<Obstacles> middle = new List<Obstacles>();
-
+        
         Obstacles hero;
         int heroSpeed = 6;
         int heroSize = 35;
 
         int counter = 0;
+
+        public static int lossCount;
 
         Obstacles objective;
         int objectiveSize = 60;
@@ -51,12 +53,10 @@ namespace _2D_Game
         int leftII = 0;
         int leftIII = 532;
         int gap = 300;
-        Boolean moveRight;
+       
 
-        int patternLength = 20;
-        int patternSpeed = 7;
 
-        public GameScreen()
+    public GameScreen()
         {
             InitializeComponent();
             Onstart();
@@ -76,6 +76,7 @@ namespace _2D_Game
             Color b = Color.Yellow;
             hero = new Obstacles(50 - heroSize / 2, 222, heroSize, c);
             objective = new Obstacles(50 - objectiveSize / 2, 222, objectiveSize, b);
+            
         }
 
         public void MakeObstacle()
@@ -84,23 +85,7 @@ namespace _2D_Game
             Color c = Color.Red;
 
 
-            //patternLength--;
-
-            //if(patternLength == 0)
-            //{
-            //    //moveRight = !moveRight;
-
-            //    patternLength = randGen.Next(1, 9);
-            //}
-
-            //if (moveRight == true)
-            //{
-            //    leftI += 7;
-            //}
-            //else
-            //{
-            //    leftI -= 7;
-            //}
+            
             if (counter % 75 == 0)
             {
 
@@ -117,14 +102,7 @@ namespace _2D_Game
                 right.Add(newobstacle2);
 
             }
-            //if (counter % 80 == 0)
-            //{
-                
-            //}
-            //if(counter % 90 == 0)
-            //{
-                
-            //}
+            
             counter++;
         }
 
@@ -154,10 +132,10 @@ namespace _2D_Game
 
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
+            // done to stop players from cheating and skipping first line
             if (counter > 200)
-            {
-                waitLabel.Visible = false;
-
+            { 
+               
                 switch (e.KeyCode)
                 { 
                     case Keys.W:
@@ -173,6 +151,8 @@ namespace _2D_Game
                         dKeyDown = true;
                         break;
                 }
+
+               
             }
         }
 
@@ -238,7 +218,10 @@ namespace _2D_Game
                 hero.Move2(heroSpeed, true);
             }
 
-            
+            if (counter > 200)
+            {
+                waitLabel.Visible = false;
+            }
 
             Rectangle heroRec = new Rectangle(hero.x, hero.y, hero.size, hero.size);
 
@@ -257,6 +240,7 @@ namespace _2D_Game
 
                         lossLabel.Text = "YOU LOSE";
                         lossSound.Play();
+                        lossCount = lossCount + 1;
 
                         Refresh();
                         Thread.Sleep(1000);
@@ -297,6 +281,8 @@ namespace _2D_Game
         {
             victorylabel.Text = "";
             lossLabel.Text = "";
+
+            
         }
 
         private void GameScreen_Paint(object sender, PaintEventArgs e)

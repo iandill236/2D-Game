@@ -31,17 +31,19 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.playButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.losscounterLabel = new System.Windows.Forms.Label();
+            this.losscounternumberLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
             // 
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.Red;
-            this.titleLabel.Location = new System.Drawing.Point(265, 37);
+            this.titleLabel.Location = new System.Drawing.Point(315, 14);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(445, 64);
+            this.titleLabel.Size = new System.Drawing.Size(373, 82);
             this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "FILLER TITLE";
+            this.titleLabel.Text = "Box Dodger";
             // 
             // playButton
             // 
@@ -75,11 +77,34 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // losscounterLabel
+            // 
+            this.losscounterLabel.AutoSize = true;
+            this.losscounterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.losscounterLabel.ForeColor = System.Drawing.Color.Red;
+            this.losscounterLabel.Location = new System.Drawing.Point(3, 14);
+            this.losscounterLabel.Name = "losscounterLabel";
+            this.losscounterLabel.Size = new System.Drawing.Size(90, 29);
+            this.losscounterLabel.TabIndex = 4;
+            this.losscounterLabel.Text = "Losses";
+            // 
+            // losscounternumberLabel
+            // 
+            this.losscounternumberLabel.AutoSize = true;
+            this.losscounternumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.losscounternumberLabel.ForeColor = System.Drawing.Color.Red;
+            this.losscounternumberLabel.Location = new System.Drawing.Point(99, 14);
+            this.losscounternumberLabel.Name = "losscounternumberLabel";
+            this.losscounternumberLabel.Size = new System.Drawing.Size(0, 29);
+            this.losscounternumberLabel.TabIndex = 5;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.losscounternumberLabel);
+            this.Controls.Add(this.losscounterLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.titleLabel);
@@ -88,6 +113,7 @@
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainScreen_Paint);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -96,5 +122,7 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label losscounterLabel;
+        private System.Windows.Forms.Label losscounternumberLabel;
     }
 }
