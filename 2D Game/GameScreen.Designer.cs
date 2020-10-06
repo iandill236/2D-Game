@@ -70,11 +70,11 @@
             this.waitLabel.AutoSize = true;
             this.waitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitLabel.ForeColor = System.Drawing.Color.Red;
-            this.waitLabel.Location = new System.Drawing.Point(17, 154);
+            this.waitLabel.Location = new System.Drawing.Point(17, 124);
             this.waitLabel.Name = "waitLabel";
-            this.waitLabel.Size = new System.Drawing.Size(156, 18);
+            this.waitLabel.Size = new System.Drawing.Size(172, 54);
             this.waitLabel.TabIndex = 2;
-            this.waitLabel.Text = "Wait a few seconds";
+            this.waitLabel.Text = "Wait a few seconds\r\n\r\nPress WASD to move";
             // 
             // GameScreen
             // 

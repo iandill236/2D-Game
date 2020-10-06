@@ -48,12 +48,19 @@ namespace _2D_Game
         int leftIII = 532;
         int gap = 300;
 
+
     public GameScreen()
         {
             InitializeComponent();
             Onstart();
         }
 
+
+        private void GameScreen_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+
+        }
         public void Onstart()
         {
             MakeObstacle();
@@ -62,15 +69,22 @@ namespace _2D_Game
             Color b = Color.Yellow;
             hero = new Obstacles(50 - heroSize / 2, 222, heroSize, c);
             objective = new Obstacles(50 - objectiveSize / 2, 222, objectiveSize, b);
+            
         }
 
         public void MakeObstacle()
         {
+           
             Color c = Color.Red;
 
+
+            
             if (counter % 75 == 0)
             {
+
+
                 Obstacles newobstacle = new Obstacles(leftI, leftIII, 20, c);
+               
                
                 left.Add(newobstacle);
 
@@ -79,8 +93,14 @@ namespace _2D_Game
 
                 Obstacles newobstacle2 = new Obstacles(leftI + gap, leftIII, 20, c);
                 right.Add(newobstacle2);
+
             }
             counter++;
+        }
+
+        private void GameScreen_KeyDown(object sender, KeyEventArgs e)
+        {
+           
         }
 
         private void GameScreen_KeyUp_1(object sender, KeyEventArgs e)
@@ -107,6 +127,7 @@ namespace _2D_Game
             // done to stop players from cheating and skipping first line
             if (counter > 200)
             { 
+               
                 switch (e.KeyCode)
                 { 
                     case Keys.W:
@@ -127,6 +148,7 @@ namespace _2D_Game
 
         private void gameLoop_Tick_1(object sender, EventArgs e)
         {
+
             foreach (Obstacles b in left)
             {
                 b.Move(-5);
@@ -237,13 +259,16 @@ namespace _2D_Game
                     }
                 }
             }
+
             Refresh();
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
             victorylabel.Text = "";
-            lossLabel.Text = "";   
+            lossLabel.Text = "";
+
+            
         }
 
         private void GameScreen_Paint(object sender, PaintEventArgs e)
