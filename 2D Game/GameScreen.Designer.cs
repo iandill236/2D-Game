@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.gameLoop = new System.Windows.Forms.Timer(this.components);
             this.victorylabel = new System.Windows.Forms.Label();
             this.lossLabel = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             // waitLabel
             // 
             this.waitLabel.AutoSize = true;
+            this.waitLabel.BackColor = System.Drawing.Color.Transparent;
             this.waitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waitLabel.ForeColor = System.Drawing.Color.Red;
             this.waitLabel.Location = new System.Drawing.Point(17, 124);
@@ -81,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::_2D_Game.Properties.Resources.Background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.waitLabel);
             this.Controls.Add(this.lossLabel);
             this.Controls.Add(this.victorylabel);
