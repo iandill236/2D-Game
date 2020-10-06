@@ -81,6 +81,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::_2D_Game.Properties.Resources.Background;
             this.Controls.Add(this.waitLabel);
             this.Controls.Add(this.lossLabel);
             this.Controls.Add(this.victorylabel);
