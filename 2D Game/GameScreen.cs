@@ -37,9 +37,7 @@ namespace _2D_Game
         int heroSpeed = 6;
         int heroSize = 35;
 
-        int counterLeft = 0;
-        int counterMiddle = 0;
-        int counterRight = 0;
+        int counter = 0;
 
         Obstacles objective;
         int objectiveSize = 60;
@@ -103,7 +101,7 @@ namespace _2D_Game
             //{
             //    leftI -= 7;
             //}
-            if (counterLeft % 75 == 0)
+            if (counter % 75 == 0)
             {
 
 
@@ -112,19 +110,22 @@ namespace _2D_Game
                
                 left.Add(newobstacle);
 
-                
-            }
-            if (counterMiddle % 80 == 0)
-            {
                 Obstacles newobstacle3 = new Obstacles(400, leftII, 20, c);
                 middle.Add(newobstacle3);
-            }
-            if(counterRight % 90 == 0)
-            {
+
                 Obstacles newobstacle2 = new Obstacles(leftI + gap, leftIII, 20, c);
                 right.Add(newobstacle2);
+
             }
-            counterLeft++;
+            //if (counter % 80 == 0)
+            //{
+                
+            //}
+            //if(counter % 90 == 0)
+            //{
+                
+            //}
+            counter++;
         }
 
         private void GameScreen_KeyDown(object sender, KeyEventArgs e)
@@ -153,7 +154,7 @@ namespace _2D_Game
 
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if (counterLeft > 200)
+            if (counter > 200)
             {
                 waitLabel.Visible = false;
 
